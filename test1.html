@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a New Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Submit a New Request</h1>
+        <form id="requestForm">
+            <!-- Request Category -->
+            <label for="requestCategory">Request Category:</label>
+            <select id="requestCategory" name="requestCategory" required>
+                <option value=""></option>
+                <option value="technical">Product & Pricing</option>
+                <option value="billing">Billing Inquiry</option>
+                <option value="general">General Inquiry</option>
+                <option value="general">Request for Access</option>
+            </select>
+
+            <!-- Sent To -->
+            <label for="sentTo">Sent To:</label>
+            <select id="sentTo" name="sentTo" required>
+                <option value=""></option>
+                <option value="support">Master Data Team</option>
+                <option value="sales">Orders Team</option>
+                <option value="admin">Inventory Team</option>
+            </select>
+
+            <!-- CC (Optional) -->
+            <label for="cc">CC (Optional):</label>
+            <input type="text" id="cc" name="cc" placeholder="Enter CC email address">
+
+            <!-- Impact Level -->
+            <label for="impactLevel">Impact Level:</label>
+            <select id="impactLevel" name="impactLevel" required>
+                <option value=""></option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <!-- Contact Details (Text box) -->
+            <label for="contactDetails">Contact Details:</label>
+            <textarea id="contactDetails" name="contactDetails" rows="1" required></textarea>
+
+            <!-- Subject -->
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <!-- Message -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="12" required></textarea>
+
+            <!-- Attach a File -->
+            <label for="attachment">Attach a File (Optional):</label>
+            <input type="file" id="attachment" name="attachment">
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Request</button>
+        </form>
+
+        <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+            <p>Thank you for your request! We will get back to you shortly.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
